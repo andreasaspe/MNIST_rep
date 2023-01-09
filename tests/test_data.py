@@ -11,11 +11,11 @@ import os
 
 import os.path
 
-from tests import _PATH_DATA
+from tests import _PATH_DATA, _PROJECT_ROOT
 import pytest
 
-train_set = CorruptMnist(train=True, in_folder="data/raw", out_folder="data/processed")
-test_set = CorruptMnist(train=False, in_folder="data/raw", out_folder="data/processed")
+train_set = CorruptMnist(train=True, in_folder=_PATH_DATA + "/raw", out_folder=_PATH_DATA + "/processed")
+test_set = CorruptMnist(train=False, in_folder=_PATH_DATA + "/raw", out_folder=_PATH_DATA + "/processed")
 
 N_train = 40000
 N_test = 5000
