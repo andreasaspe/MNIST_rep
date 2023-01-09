@@ -26,4 +26,4 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        python -m pytest tests/
+        pytest --rootdir=/Users/runner/work/MNIST_rep
