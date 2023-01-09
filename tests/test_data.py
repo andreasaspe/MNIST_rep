@@ -21,7 +21,7 @@ N_train = 40000
 N_test = 5000
 
 class TestClass:
-    @pytest.mark.skipif(not os.path.exists(_PATH_DATA+'/this_folder_doesnt_exist'), reason="Data files not found")
+    #@pytest.mark.skipif(not os.path.exists(_PATH_DATA+'/this_folder_doesnt_exist'), reason="Data files not found")
     def test_len(self): #Test length of dataset
         assert len(train_set) == N_train, "Training dataset did not have the correct number of samples"
         assert len(test_set) == N_test, "Test dataset did not have the correct number of samples"
