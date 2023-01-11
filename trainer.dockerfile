@@ -17,3 +17,5 @@ WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 
 ENTRYPOINT ["python", "-u", "src/models/train_model.py"]
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
